@@ -15,7 +15,9 @@ class LogPrinter
       'WEBPAGES WITH MOST PAGE VIEWS:',
       fmt(:page_views, 'visits'),
       'WEBPAGES WITH MOST UNIQUE PAGE VIEWS:',
-      fmt(:unique_page_views, 'unique views')
+      fmt(:unique_page_views, 'unique views'),
+      'AVERAGE VIEWS:',
+      fmt(:average_page_view, 'average per view')
     ].join("\n\n")
   end
 

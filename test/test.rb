@@ -27,6 +27,15 @@ class TestParser < Minitest::Test
       /help_page/1 - 23 unique views
       /about/2 - 22 unique views
       /about - 21 unique views
+
+      AVERAGE VIEWS:
+
+      /about/2 - 4 average per view
+      /about - 3 average per view
+      /index - 3 average per view
+      /home - 3 average per view
+      /contact - 3 average per view
+      /help_page/1 - 3 average per view
     STR
     actual = Parser.new('webserver.log').run.to_s
 
@@ -53,6 +62,15 @@ class TestParser < Minitest::Test
       | /help_page/1 | 23 unique views |
       |     /about/2 | 22 unique views |
       |       /about | 21 unique views |
+
+      AVERAGE VIEWS:
+
+      |     /about/2 | 4 average per view |
+      |       /about | 3 average per view |
+      |       /index | 3 average per view |
+      |        /home | 3 average per view |
+      |     /contact | 3 average per view |
+      | /help_page/1 | 3 average per view |
 
     STR
     actual = Parser.new('webserver.log', log_printer: LogPrinter::Table).run.to_s

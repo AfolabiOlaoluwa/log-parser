@@ -16,8 +16,10 @@ class LogProcessor
       ips = events.map(&:ip)
       OpenStruct.new(
         page_views: ips.count,
-        unique_page_views: ips.uniq.count
+        unique_page_views: ips.uniq.count,
+        average_page_view: ips.count / ips.uniq.count
       )
     end
   end
 end
+
