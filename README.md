@@ -1,4 +1,4 @@
-## **Though Process**:
+## **Thought Process**:
 
 The thought process is based processes of Input, Process, Output. It is expected the user throws in a command, the code processes it and the user gets the output. However, the underlying though processed is about Extensibility and Dependency Inversion so as to not create a loosely coupled code. In short, the SOLID Principles.
 
